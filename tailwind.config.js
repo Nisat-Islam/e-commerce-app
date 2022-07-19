@@ -48,23 +48,10 @@ module.exports = {
         620: '620px',
       },
 
-      colors: {
-        headingColor: '#2e2e2e',
-        textColor: '#515151',
-        cartNumBg: '#e80013',
-        primary: '#f5f3f3',
-        cardOverlay: 'rgba(256,256,256,0.4)',
-        lighttextGray: '#9ca0ab',
-        card: 'rgba(256,256,256,0.8)',
-        cartBg: '#282a2c',
-        cartItem: '#2e3033',
-        cartTotal: '#343739',
-        rowBg: 'rgba(251, 131, 0, 0.05)',
-      },
       fontFamily: {
-        sora: ['Sora', 'sans-serif'],
-        poppins: ['Poppins'],
-        diplomata: ['Diplomata Sc'],
+        
+        
+        
         shadow: ['Shadows Into Light'],
       },
     },
