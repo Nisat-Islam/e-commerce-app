@@ -147,8 +147,8 @@ const CheckOut = () => {
         totalQuantity: deleteField(),
         deliveryInfo: deleteField(),
       });
-      localStorage.clear();
-      dispatch(cartUpdateActions.clearCart());
+      // localStorage.clear();
+      // dispatch(cartUpdateActions.clearCart());
       dispatch(orderActions.orderItem(orderDb));
       navigate('/orderComplete');
     }

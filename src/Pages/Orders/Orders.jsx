@@ -143,7 +143,7 @@ const Orders = () => {
                                           <img
                                             src={item.img}
                                             alt="item"
-                                            className="w-[50px] h-[50px]"
+                                            className="w-[50px] h-[50px] object-contain"
                                           />
                                         </div>
                                         <div className="w-full">

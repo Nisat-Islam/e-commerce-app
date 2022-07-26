@@ -1,7 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { cartUpdateActions } from '../../store/cartUpdateSlice';
 
 const OrderComplete = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    localStorage.clear();
+    dispatch(cartUpdateActions.clearCart());
+  }, [dispatch]);
   return (
     <div className="w-full h-screen bg-gradient-to-tr from-gray-100 to-gray-200 flex justify-center">
       <div className="flex flex-col md:p-2 gap-4 text-center mt-7">

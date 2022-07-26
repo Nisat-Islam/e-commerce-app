@@ -32,7 +32,6 @@ body {
       border-radius: 10px;
 
       background: url('./img/cartfire.png');
-      background: reverse;
 
       border: 0.1px double orange;
       background-color: rgb(255, 230, 179, 0.4);

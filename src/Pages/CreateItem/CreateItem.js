@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdMoney } from 'react-icons/md';
 
@@ -14,6 +14,7 @@ import {
 } from 'firebase/storage';
 import PageLoading from '../../utils/PageLoading';
 import { RiImageAddFill } from 'react-icons/ri';
+import { AuthContext } from '../../Context/AuthContext';
 const CreateItem = () => {
   const [title, setTitle] = useState('');
   const [rating, setRating] = useState('');
@@ -25,7 +26,7 @@ const CreateItem = () => {
   const [alertStatus, setAlertStatus] = useState('');
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
+  const { user } = useContext(AuthContext);
   const uploadImage = (e) => {
     let imageFile = e.target.files[0];
 
@@ -172,7 +173,6 @@ const CreateItem = () => {
               />
             </div>
           </div>
-
           <div
             className={`relative mt-3 group flex 
          flex-col items-center 
@@ -201,7 +201,7 @@ const CreateItem = () => {
                     <label className="group flex flex-col items-center justify-center w-full h-full cursor-pointer">
                       <div className="flex flex-col items-center justify-center w-full h-full gap-3">
                         <RiImageAddFill className="text-4xl text-orange-400 group-hover:text-orange-500 group-hover:animate-bounce" />
-                        <p className="text-lg text-orange-400 group-hover:text-orange-500">
+                        <p className="text-lg text-center text-orange-400 group-hover:text-orange-500">
                           Upload Product Image
                         </p>
                       </div>
@@ -237,7 +237,6 @@ const CreateItem = () => {
               </>
             )}
           </div>
-
           {fields && (
             <motion.p
               initial={{ opacity: 0 }}
@@ -252,15 +251,27 @@ const CreateItem = () => {
               {msg}
             </motion.p>
           )}
+          {/* {user && user.email === 'test@google.com' ? (
+            <div className="w-full flex items-center mt-2">
+              <button
+                type="button"
+                className="bg-gradient-to-t from-slate-800 to-slate-900 hover:bg-gradient-to-t hover:from-slate-900 hover:to-slate-800 border border-orange-300 w-full h-full   md:py-3 md:px-7 rounded-md py-2 font-semibold text-orange-300 hover:text-orange-400"
+                onClick={saveDetails}
+              >
+                Submit
+              </button>
+            </div>
+          ) : ( */}
           <div className="w-full flex items-center mt-2">
             <button
+              disabled
               type="button"
               className="bg-gradient-to-t from-slate-800 to-slate-900 hover:bg-gradient-to-t hover:from-slate-900 hover:to-slate-800 border border-orange-300 w-full h-full   md:py-3 md:px-7 rounded-md py-2 font-semibold text-orange-300 hover:text-orange-400"
-              onClick={saveDetails}
             >
-              Submit
+              Sorry You Are not authorized to sell
             </button>
           </div>
+          {/* )} */}
         </div>
       </div>
     </div>

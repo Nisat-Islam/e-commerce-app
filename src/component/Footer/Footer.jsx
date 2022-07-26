@@ -5,8 +5,8 @@ import { FcAndroidOs } from 'react-icons/fc';
 import { MdPhoneIphone } from 'react-icons/md';
 const Footer = () => {
   return (
-    <div className="w-full h-full">
-      <div className="flex sm:flex-row flex-col px-0 sm:px-5 justify-center gap-10 bg-gradient-to-r from-slate-800 to-slate-900 p-10 sm:text-left text-center">
+    <div className="w-full h-full bg-gradient-to-r from-slate-800 to-slate-900">
+      <div className="flex sm:flex-row flex-col px-0 sm:px-5 justify-center gap-10  p-10 sm:text-left text-center">
         <div className="flex flex-col gap-3">
           <h1 className="text-lg font-semibold text-orange-400 tracking-wide">
             Follow Us
@@ -74,8 +74,11 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <p className="bg-gradient-to-r from-slate-800 to-slate-900 text-orange-400 text-center pb-5">
+      <p className=" text-orange-400 text-center pb-5">
         © 2022 e-commerce. All rights reserved.
+      </p>
+      <p className="text-orange-500 brightness-150 font-semibold tracking-wider text-center">
+        Developed By Nisad Tushar
       </p>
     </div>
   );

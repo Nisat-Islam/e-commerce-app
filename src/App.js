@@ -15,7 +15,7 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import Orders from './Pages/Orders/Orders';
 import OrderComplete from './Pages/OrderComplete/OrderComplete';
 import CategoryPage from './Pages/CategoryPage/CategoryPage';
-import PageLoading from './utils/PageLoading';
+
 import Footer from './component/Footer/Footer';
 
 import SearchPage from './Pages/SearchPage/SearchPage';
@@ -30,7 +30,7 @@ function App() {
     authIsReady && (
       <div className="App flex flex-col w-full h-auto bg-gradient-to-tr from-orange-100 to-orange-200">
         <Header />
-        <PageLoading />
+
         {cartOpen && <CartContainer />}
         <div>
           <Routes>
