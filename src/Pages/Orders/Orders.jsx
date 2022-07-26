@@ -300,7 +300,7 @@ const Orders = () => {
             })}
           </div>
         ) : (
-          <div className="w-full h-screen flex flex-col">
+          <div className="w-full h-screen flex flex-col mt-12">
             <h1 className="w-full h-full text-center semism:text-2xl text-xl font-semibold">
               You Have Not Ordered Anything From Us Yet
             </h1>

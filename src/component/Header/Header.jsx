@@ -40,7 +40,7 @@ const Header = () => {
     setSearch(false);
   };
   return (
-    <header className="fixed z-50 w-screen xl:px-16 bg-gradient-to-r from-slate-800 to-slate-900 rounded-md">
+    <header className="fixed z-50 w-screen xl:px-16 bg-gradient-to-r from-slate-800 to-slate-900 rounded-b-md">
       {/* desktop & tab start*/}
       <div className="hidden lg:flex w-full h-full p-2 justify-between">
         <NavLink to={'/'}>
@@ -56,7 +56,7 @@ const Header = () => {
             initial={{ opcity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
-            className="flex gap-6 items-center ml-auto "
+            className="relative flex gap-6 items-center ml-auto "
           >
             {' '}
             <NavLink to={'/'}>
@@ -167,7 +167,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
                 onSubmit={searchInputHandler}
-                className="w-56   shadow-md shadow-slate-800 border border-orange-300  rounded-md flex absolute right-[127px] mt-[85px]"
+                className="w-56   shadow-md shadow-slate-800 border border-orange-300  rounded-md flex absolute  right-0 mt-[85px]"
               >
                 <input
                   className="w-full h-full p-[5px] bg-gradient-to-r from-slate-800 to-slate-900  outline-none px-2 text-orange-400 font-semibold tracking-wide py-2"

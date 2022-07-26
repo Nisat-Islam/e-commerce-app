@@ -167,7 +167,7 @@ const CheckOut = () => {
     setToggle((prev) => !prev);
   };
   return (
-    <div className="bg-orange-300  px-2 pt-12 md:px-5 lg:px-10">
+    <div className="bg-orange-300  px-2 pt-12 md:px-5 lg:px-10 mt-3">
       <div className="flex w-fit gap-4 rounded-md border-2 border-orange-400 bg-gradient-to-tr from-slate-800 to-slate-900 p-5 shadow-md shadow-slate-800 ">
         <FaUserAlt className="text-5xl text-orange-500 shadow-md shadow-green-300" />
         <div className="flex flex-col">
@@ -364,7 +364,7 @@ const CheckOut = () => {
                           <img
                             src={food.img}
                             alt="product"
-                            className="w-full"
+                            className="w-16 h-16 object-contain"
                           />
                         </div>
                         <div className="flex flex-col items-start">

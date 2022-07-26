@@ -12,7 +12,7 @@ const OrderComplete = () => {
     dispatch(cartUpdateActions.clearCart());
   }, [dispatch]);
   return (
-    <div className="w-full h-screen bg-gradient-to-tr from-gray-100 to-gray-200 flex justify-center">
+    <div className="w-full h-screen bg-gradient-to-tr from-gray-100 to-gray-200 flex justify-center mt-10">
       <div className="flex flex-col md:p-2 gap-4 text-center mt-7">
         <h2 className="text-4xl font-semibold text-orange-400">
           Congratulations

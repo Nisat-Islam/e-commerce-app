@@ -202,7 +202,7 @@ const CheckOutReceipt = (props) => {
                           <img
                             src={item.img}
                             alt="item"
-                            className="h-[30px] w-[30px] 2xsm:h-[50px] 2xsm:w-[50px]"
+                            className="h-[30px] w-[30px] 2xsm:h-[50px] 2xsm:w-[50px] object-contain"
                           />
                         </div>
                         <div className="w-full py-5 text-sm 2xsm:text-base bg-gradient-to-r from-slate-800 to-slate-900">
