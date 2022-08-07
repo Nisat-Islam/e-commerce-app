@@ -47,7 +47,7 @@ const Orders = () => {
     }
   };
   return (
-    <div className="py-10">
+    <div className="py-10 min-h-screen">
       <div>
         {order.length > 0 ? (
           <div className="flex flex-col gap-3 mt-4">

@@ -167,7 +167,9 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
                 onSubmit={searchInputHandler}
-                className="w-56   shadow-md shadow-slate-800 border border-orange-300  rounded-md flex absolute  right-0 mt-[85px]"
+                className={`w-56  shadow-md shadow-slate-800 border border-orange-300  rounded-md flex absolute  right-0 ${
+                  !user ? 'md:right-[200px]' : 'right-0'
+                } mt-[85px]`}
               >
                 <input
                   className="w-full h-full p-[5px] bg-gradient-to-r from-slate-800 to-slate-900  outline-none px-2 text-orange-400 font-semibold tracking-wide py-2"

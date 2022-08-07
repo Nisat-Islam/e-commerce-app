@@ -31,7 +31,7 @@ const CheckOut = () => {
   const [address, setAddress] = useState('');
   const [house, setHouse] = useState('');
   const [city, setCity] = useState('');
-  const [country, setCountry] = useState('Bangladesh');
+  const country = 'Bangladesh';
   const [postalCode, setPostalCode] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
   const [msg, setMsg] = useState('');

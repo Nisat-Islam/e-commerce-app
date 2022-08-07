@@ -251,9 +251,10 @@ const CreateItem = () => {
               {msg}
             </motion.p>
           )}
-          {/* {user && user.email === 'test@google.com' ? (
+          {user && user.email === 'test@google.com' ? (
             <div className="w-full flex items-center mt-2">
               <button
+                disabled
                 type="button"
                 className="bg-gradient-to-t from-slate-800 to-slate-900 hover:bg-gradient-to-t hover:from-slate-900 hover:to-slate-800 border border-orange-300 w-full h-full   md:py-3 md:px-7 rounded-md py-2 font-semibold text-orange-300 hover:text-orange-400"
                 onClick={saveDetails}
@@ -261,17 +262,17 @@ const CreateItem = () => {
                 Submit
               </button>
             </div>
-          ) : ( */}
-          <div className="w-full flex items-center mt-2">
-            <button
-              disabled
-              type="button"
-              className="bg-gradient-to-t from-slate-800 to-slate-900 hover:bg-gradient-to-t hover:from-slate-900 hover:to-slate-800 border border-orange-300 w-full h-full   md:py-3 md:px-7 rounded-md py-2 font-semibold text-orange-300 hover:text-orange-400"
-            >
-              Sorry You Are not authorized to sell
-            </button>
-          </div>
-          {/* )} */}
+          ) : (
+            <div className="w-full flex items-center mt-2">
+              <button
+                disabled
+                type="button"
+                className="bg-gradient-to-t from-slate-800 to-slate-900 hover:bg-gradient-to-t hover:from-slate-900 hover:to-slate-800 border border-orange-300 w-full h-full   md:py-3 md:px-7 rounded-md py-2 font-semibold text-orange-300 hover:text-orange-400"
+              >
+                Sorry You Are not authorized to sell
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

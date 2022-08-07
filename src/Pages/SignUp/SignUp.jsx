@@ -11,7 +11,11 @@ const SignUp = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (!email || !password) {
+      setMsgField(true);
       setMsg('Please fill all fields');
+      setTimeout(() => {
+        setMsgField(false);
+      }, 4000);
     } else {
       userSignUp(email, password);
     }

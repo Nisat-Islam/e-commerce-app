@@ -5,7 +5,7 @@ import { AiFillStar } from 'react-icons/ai';
 import { BsCartCheckFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartUpdateActions } from '../../store/cartUpdateSlice';
-
+import { useInView } from 'react-intersection-observer';
 import { categoryData } from '../../utils/dataProvider';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -20,6 +20,10 @@ import { db } from '../../firebase/firebase.config';
 import PageLoading from '../../utils/PageLoading';
 
 const ItemSection = (props) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: '100px 0px',
+  });
   const [foods, setFoods] = useState('');
   const [filter, setFilter] = useState('fruit');
 
@@ -63,7 +67,7 @@ const ItemSection = (props) => {
       return () => unsub();
     };
     fetcher();
-  }, [filter]);
+  }, [filter, props.featured, props.itemType, props.searchType]);
   const navigate = useNavigate();
   return (
     <>
@@ -128,6 +132,7 @@ const ItemSection = (props) => {
         </div>
       )}
       <div
+        ref={ref}
         className={` bg-gradient my-12 flex overflow-x-scroll rounded-md from-orange-100  to-orange-200 transition-all duration-150 ease-in-out scrollbar scrollbar-track-orange-300 
      scrollbar-thumb-orange-700 `}
       >
@@ -145,11 +150,13 @@ const ItemSection = (props) => {
                   transition={{ ease: 'easeInOut' }}
                   className="h-36 w-36"
                 >
-                  <img
-                    src={item.imageURL}
-                    alt={item.title}
-                    className="h-full w-full object-contain mix-blend-normal brightness-105 drop-shadow-xl"
-                  />
+                  {inView && (
+                    <img
+                      src={item.imageURL}
+                      alt={item.title}
+                      className="h-full w-full object-contain mix-blend-normal brightness-105 drop-shadow-xl"
+                    />
+                  )}
                 </motion.div>
               </div>
 
